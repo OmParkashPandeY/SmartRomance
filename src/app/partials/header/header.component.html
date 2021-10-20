@@ -1,27 +1,36 @@
 <div style="position: fixed; top: 0px; width: 100%; z-index: 10;">
-    <a href="https://getbootstrap.com/" class="d-block px-3 py-2 text-center text-bold text-white old-bv">There's a
+    <a href="https://getbootstrap.com/"
+        class="d-block px-3 py-2 text-center text-bold text-white old-bv">There's
+        a
         newer
         version of Bootstrap 4!</a>
-    <nav class="navbar navbar-expand-lg py-3 navbar-dark">
+    <nav class="navbar navbar-expand-lg py-1 navbar-dark">
 
         <div class="hoverTooltip">
-            <button class="btn btn-md sidebarMenuButton  btn-outline-light" (click)="showHideSideBar()">
+            <button class="btn btn-sm sidebarMenuButton  btn-outline-light"
+                (click)="showHideSideBar()">
                 <i class="fas fa-bars"></i>
             </button>
             <span class="hoverTooltiptext sideMenu">Side-Menu</span>
         </div>
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">Smart Romance</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link " routerLink="/main/profile" style="letter-spacing: 1px;">
+                        <span class="linkableButton">
+                            Profile
+                        </span>
+                    </a>
                 </li>
-                <li class="nav-item">
+
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,13 +47,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                </li> -->
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                    aria-label="Search">
                 <div class="hoverTooltip">
-                    <button (click)=" logoutUser()" class="btn btn-outline-success my-2 my-sm-0 btn-bd-download"
-                        type="submit">
+                    <button (click)=" logoutUser()" class="btn btn-light" type="submit">
                         <i class="fas fa-sign-out-alt"></i></button>
                     <span class="hoverTooltiptext signout">Log-Out</span>
                 </div>

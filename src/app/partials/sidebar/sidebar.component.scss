@@ -1,15 +1,14 @@
 
   .sidebar{
     background-color: rgb(241, 241, 241);
-    height: 100vh;
+
     margin-left: -265px;
     transition: 0.5s;
     width: 260px;
     z-index: 5;
     position: fixed;
     top: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  bottom: 0px;
 
 }
 .hoverTooltip {

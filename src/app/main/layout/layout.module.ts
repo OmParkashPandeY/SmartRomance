@@ -5,6 +5,7 @@ import { SidebarComponent } from 'src/app/partials/sidebar/sidebar.component';
 import { HeaderComponent } from 'src/app/partials/header/header.component';
 import { FotterComponent } from 'src/app/partials/fotter/fotter.component';
 import { LayoutComponent } from './layout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,6 +19,7 @@ import { LayoutComponent } from './layout.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class LayoutModule { }
