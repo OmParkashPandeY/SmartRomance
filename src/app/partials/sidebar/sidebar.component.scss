@@ -1,47 +1,48 @@
-
-  .sidebar{
-    background-color: rgb(241, 241, 241);
-
-    margin-left: -265px;
-    transition: 0.5s;
-    width: 260px;
-    z-index: 5;
-    position: fixed;
-    top: 0px;
+.sidebar {
+  background-color: #6f519d;
+  margin-left: -275px;
+  padding-left: 10px;
+  transition: 0.5s;
+  width: 275px;
+  z-index: 5;
+  position: fixed;
+  top: 0px;
   bottom: 0px;
 
 }
+
 .hoverTooltip {
-    position: relative;
-    display: inline-block;
-  
-  }
+  position: relative;
+  display: inline-block;
 
-  .hoverTooltip .hoverTooltipText {
-    visibility: hidden;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2px;
-    padding-bottom: 5px;
-    position: absolute;
-    z-index: 1;
-  }
+}
 
-
-  .ttFromClosePosition{
-    top: 10px;
-    left: 48px;
-  }
-   .ttFromIconPosition{
-    top: 33px;
-    right: - 80px;
-  }
+.hoverTooltip .hoverTooltipText {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  position: absolute;
+  z-index: 1;
+}
 
 
-  .hoverTooltip:hover .hoverTooltipText {
-    visibility: visible;
-  }
+.ttFromClosePosition {
+  top: 10px;
+  left: 48px;
+}
+
+.ttFromIconPosition {
+  top: 33px;
+  right: - 80px;
+}
+
+
+.hoverTooltip:hover .hoverTooltipText {
+  visibility: visible;
+}

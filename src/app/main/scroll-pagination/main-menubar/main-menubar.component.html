@@ -1,0 +1,26 @@
+<div class="main-container">
+     <div class="row m-0 p-0">
+          <div class="col-md-12 main-column">
+               <div class="details-block" (scroll)="onScroll($event)">
+                    <div class="container">
+                         <div class="row">
+                              <ng-container *ngFor="let comment of commentList.commentsList; index as elementIndex">
+                                   <ng-container *ngIf="elementIndex < paginationIndex">
+                                        <div class="col-12">
+                                             <div class="show-element">
+                                                  <p>{{ comment.body }}</p>
+                                             </div>
+                                        </div>
+                                   </ng-container>
+                              </ng-container>
+                              <div class="col-md-12 text-center py-3">
+                                   <div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>

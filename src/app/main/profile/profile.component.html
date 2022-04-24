@@ -10,181 +10,85 @@
 
                 <div class="container">
                     <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
+                        <!-- ---------------------------------------------------------------------------------------- -->
                         <div class="col-md-5">
-                            <div class="form-group">
+                            <div class="form-group  m-0">
                                 <label for="firstName">First Name</label>
                                 <input type="text" formControlName="firstName" required
                                     pattern="[A-Za-z]*" minlength="2" maxlength="20"
-                                    class="form-control my-2" id="firstName" placeholder="Enter your
-                                firstname">
+                                    class="form-control my-1" id="firstName"
+                                    placeholder="Enter your firstname">
                             </div>
-                        </div>
-                        <div class="col-md-5">
 
-                            <div class="form-group">
+                            <ng-container *ngIf="runFormValidation('firstName')">
+                                <p class="formErrorMessage"
+                                    *ngIf="usersProfileForm.controls['firstName'].errors.required">
+                                    Please enter firstname
+                                </p>
+                            </ng-container>
+
+                        </div>
+                        <!-- ---------------------------------------------------------------------------------------- -->
+
+                        <div class="col-md-5">
+                            <div class="form-group m-0">
                                 <label for="lastName">Last Name</label>
                                 <input type="text" formControlName="lastName" required
                                     pattern="[A-Za-z]*" minlength="2" maxlength="20"
-                                    class="form-control my-2" id="lastName"
+                                    class="form-control my-1" id="lastName"
                                     placeholder="Enter your lastname">
                             </div>
+
+                            <ng-container *ngIf="runFormValidation('lastName')">
+                                <p class="formErrorMessage"
+                                    *ngIf="usersProfileForm.controls['lastName'].errors.required">
+                                    Please enter lastname
+                                </p>
+                            </ng-container>
                         </div>
-                        <!-- ------------------------------- -->
+                        <!-- ---------------------------------------------------------------------------------------- -->
                     </div>
                 </div>
-
                 <div class="container">
                     <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
+                        <!-- ---------------------------------------------------------------------------------------- -->
                         <div class="col-md-5">
-                            <div class="form-group">
+                            <div class="form-group mb-0">
                                 <label for="email">Email</label>
                                 <input type="email" formControlName="email" required
                                     pattern="[A-Za-z]*" minlength="2" maxlength="20"
                                     class="form-control my-2" id="email"
                                     placeholder="Enter your email">
                             </div>
+                            <ng-container *ngIf="runFormValidation('email')">
+                                <p class="formErrorMessage"
+                                    *ngIf="usersProfileForm.controls['email'].errors.required">
+                                    Please enter email
+                                </p>
+                            </ng-container>
                         </div>
-                        <div class="col-md-5">
+                        <!-- ---------------------------------------------------------------------------------------- -->
 
-                            <div class="form-group">
+                        <div class="col-md-5">
+                            <div class="form-group mb-0">
                                 <label for="dateOfBirth">Date Of Birth</label>
                                 <input type="datetime-local" formControlName="dateOfBirth" required
                                     pattern="[A-Za-z]*" minlength="2" maxlength="20"
                                     class="form-control my-2" id="dateOfBirth">
                             </div>
+                            <ng-container *ngIf="runFormValidation('dateOfBirth')">
+                                <p class="formErrorMessage"
+                                    *ngIf="usersProfileForm.controls['dateOfBirth'].errors.required">
+                                    Please enter date of birth
+                                </p>
+                            </ng-container>
                         </div>
-                        <!-- ------------------------------- -->
-                    </div>
-                </div>
+                        <!-- ---------------------------------------------------------------------------------------- -->
 
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" formControlName="password" required
-                                    pattern="[A-Za-z]*" minlength="2" maxlength="20"
-                                    class="form-control my-2" id="password"
-                                    placeholder="Enter password">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-
-                            <div class="form-group">
-                                <label for="confirmPassword">Confirm
-                                    Password</label>
-                                <input type="password" formControlName="confirmPassword" required
-                                    pattern="[A-Za-z]*" minlength="2" maxlength="20"
-                                    class="form-control my-2" id="confirmPassword"
-                                    placeholder="Enter confirm password">
-                            </div>
-                        </div>
-                        <!-- ------------------------------- -->
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="genderName">Gender</label>
-                                <select formControlName="gender" required class="form-control"
-                                    id="genderName">
-
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Others">Others</option>
-
-                                </select>
-
-
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-
-                            <div class="form-group">
-                                <label for="maritalStatus">Marital
-                                    Status</label>
-                                <select formControlName="maritalStatus" required
-                                    class="form-control" id="maritalStatus">
-                                    <option value="Unmarried">Unmarried</option>
-                                    <option value="Married">Married</option>
-
-                                </select>
-                            </div>
-                        </div>
-                        <!-- ------------------------------- -->
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="countryName">Country</label>
-                                <select formControlName="countryName"
-                                    (change)="getAllStateList(countryName.value)" required
-                                    class="form-control" #countryName>
-                                    <option value="" selected>Select
-                                        Country</option>
-                                    <ng-container *ngFor="let item of
-                                    listOfAllCountry">
-                                        <option [ngValue]="item.isoCode">{{item.name}}</option>
-                                    </ng-container>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="stateName">State</label>
-                                <select formControlName="stateName" required class="form-control"
-                                    id="stateName">
-                                    <ng-container *ngFor="let item of
-                                    listOfAllState">
-                                        <option value="Unmarried">{{item.name}}</option>
-                                    </ng-container>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- ------------------------------- -->
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="cityName">City</label>
-                                <select formControlName="cityName" required class="form-control"
-                                    id="cityName">
-                                    <ng-container *ngFor="let item of
-                                    listOfAllState">
-                                        <option value="Unmarried">{{item.name}}</option>
-                                    </ng-container>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="phoneNumber">Contact Number</label>
-                                <input type="tel" formControlName="phoneNumber" required
-                                    minlength="10" maxlength="10" class="form-control my-2"
-                                    id="phoneNumber">
-                            </div>
-                        </div>
-
-                        <!-- ------------------------------- -->
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <!-- ------------------------------- -->
+                    <div class="row justify-content-center mt-2">
                         <div class="col-md-5">
 
                         </div>
@@ -192,14 +96,139 @@
                             <div class="form-group">
                                 <button style="float: right;" class="btn
                                 btn-secondary px-5 ml-auto">Submit</button>
-
                             </div>
                         </div>
-
-                        <!-- ------------------------------- -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </form>
+
+
+
+<!-- 
+
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" required
+                    pattern="[A-Za-z]*" minlength="2" maxlength="20"
+                    class="form-control my-2" id="password"
+                    placeholder="Enter password">
+            </div>
+        </div>
+        <div class="col-md-5">
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm
+                    Password</label>
+                <input type="password" formControlName="confirmPassword" required
+                    pattern="[A-Za-z]*" minlength="2" maxlength="20"
+                    class="form-control my-2" id="confirmPassword"
+                    placeholder="Enter confirm password">
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="genderName">Gender</label>
+                <select formControlName="gender" required class="form-control"
+                    id="genderName">
+
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+
+                </select>
+
+
+            </div>
+        </div>
+        <div class="col-md-5">
+
+            <div class="form-group">
+                <label for="maritalStatus">Marital
+                    Status</label>
+                <select formControlName="maritalStatus" required
+                    class="form-control" id="maritalStatus">
+                    <option value="Unmarried">Unmarried</option>
+                    <option value="Married">Married</option>
+
+                </select>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="countryName">Country</label>
+                <select formControlName="countryName"
+                    (change)="getAllStateList(countryName.value)" required
+                    class="form-control" #countryName>
+                    <option value="" selected>Select
+                        Country</option>
+                    <ng-container *ngFor="let item of
+                    listOfAllCountry">
+                        <option [ngValue]="item.isoCode">{{item.name}}</option>
+                    </ng-container>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="stateName">State</label>
+                <select formControlName="stateName" required class="form-control"
+                    id="stateName">
+                    <ng-container *ngFor="let item of
+                    listOfAllState">
+                        <option value="Unmarried">{{item.name}}</option>
+                    </ng-container>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="cityName">City</label>
+                <select formControlName="cityName" required class="form-control"
+                    id="cityName">
+                    <ng-container *ngFor="let item of
+                    listOfAllState">
+                        <option value="Unmarried">{{item.name}}</option>
+                    </ng-container>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="phoneNumber">Contact Number</label>
+                <input type="tel" formControlName="phoneNumber" required
+                    minlength="10" maxlength="10" class="form-control my-2"
+                    id="phoneNumber">
+            </div>
+        </div>
+
+        
+    </div>
+</div> -->

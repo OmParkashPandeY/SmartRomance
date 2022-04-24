@@ -6,25 +6,22 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild("dynamicFormPopupBtn") dynamicFormPopupBtn!: ElementRef;
+  @ViewChild('dynamicFormPopupBtn') dynamicFormPopupBtn!: ElementRef;
 
   constructor(
     private element: ElementRef,
     private _router: Router,
-    private dataServices: DataService,
-  ) { }
+    private dataServices: DataService
+  ) {}
 
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
   //---------------------------------------------------------------------------------
   showHideSideBar() {
     this.dataServices.sendClickEvent();
-    console.log("Hello World");
+    // console.log("Hello World");
   }
   //---------------------------------------------------------------------------------
 
@@ -35,5 +32,3 @@ export class HeaderComponent implements OnInit {
   }
   //---------------------------------------------------------------------------------
 }
-
-

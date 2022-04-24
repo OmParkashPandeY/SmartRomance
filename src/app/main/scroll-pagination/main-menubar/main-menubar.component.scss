@@ -1,0 +1,38 @@
+.main-container {
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    //  background-color: orangered;
+    border-radius: 10px;
+
+  }
+
+  .main-column {
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 0px;
+
+    .details-block {
+      height: calc(100vh - 90px);
+      overflow: auto;
+    }
+  }
+
+  .spinner-border {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: text-bottom;
+    border: 6px solid #6a2bb0;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 0.75s linear infinite spinner-border;
+  }
+}

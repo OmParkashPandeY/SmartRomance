@@ -1,0 +1,29 @@
+.main-container {
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(101, 100, 100, 0.505);
+    border-radius: 10px;
+
+  }
+
+  .main-column {
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 0px;
+
+    .details-block {
+      height: calc(100vh - 90px);
+      overflow: auto;
+    }
+  }
+
+
+
+}
