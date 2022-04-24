@@ -4,20 +4,43 @@
                <div class="details-block" (scroll)="onScroll($event)">
                     <div class="container">
                          <div class="row">
+                              <div class="col-md-12 py-2">
+                                   <b style="font-size: 18px">Dummy Comments</b>
+                              </div>
                               <ng-container *ngFor="let comment of commentList.commentsList; index as elementIndex">
                                    <ng-container *ngIf="elementIndex < paginationIndex">
                                         <div class="col-12">
                                              <div class="show-element">
-                                                  <p>{{ comment.body }}</p>
+                                                  <div class="card mt-1 p-2 shadow">
+                                                       <div class="row">
+                                                            <div class="col-md-12">
+                                                                 <p style="font-size: 15px; font-weight: 600; font-family: sans-serif">
+                                                                      <span>{{ comment.id }}. {{ comment.name }}</span>
+                                                                 </p>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                 <p>
+                                                                      {{ comment.body }}
+                                                                 </p>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                 <p>
+                                                                      {{ comment.email }}
+                                                                 </p>
+                                                            </div>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </div>
                                    </ng-container>
                               </ng-container>
-                              <div class="col-md-12 text-center py-3">
-                                   <div class="spinner-border text-primary" role="status">
-                                        <span class="sr-only">Loading...</span>
+                              <ng-container *ngIf="isShowSpinner">
+                                   <div class="col-md-12 text-center py-3">
+                                        <div class="spinner-border text-primary" role="status">
+                                             <span class="sr-only">Loading...</span>
+                                        </div>
                                    </div>
-                              </div>
+                              </ng-container>
                          </div>
                     </div>
                </div>
