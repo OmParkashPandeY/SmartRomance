@@ -1,0 +1,131 @@
+<span class="emoji-button" (click)="toggleEmojiCard(true)">
+     <!-- <i class="far fa-grin-alt"></i> -->
+     <span [innerHTML]="buttonHtml"></span>
+</span>
+<ng-container>
+     <div id="customEmojiCard" [ngStyle]="styleObject" class="emoji-card card shadow noselect">
+          <div class="card-header">
+               <div class="header-icon-button">
+                    <div class="action-button" (click)="scrollToElement(peopleLink)">
+                         <span>😀</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(activityLink)">
+                         <span>🚴</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(flagsLink)">
+                         <span>🚩</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(foodDringLink)">
+                         <span>🍔</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(natureLink)">
+                         <span>🐻</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(objectLinks)">
+                         <span>🔎</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(symbolLinks)">
+                         <span>💝</span>
+                    </div>
+                    <div class="action-button" (click)="scrollToElement(travelPlaceLink)">
+                         <span>⛱️</span>
+                    </div>
+
+                    <div class="action-button close-button" (click)="toggleEmojiCard(false)">
+                         <i class="fas fa-times"></i>
+                    </div>
+               </div>
+          </div>
+          <div class="card-body">
+               <div class="row m-0 p-0 emoji-row">
+                    <div #peopleLink class="col-md-12 emoji-title-column">
+                         <span>People</span>
+                    </div>
+                    <ng-container *ngIf="EmojiPeople.length > 0">
+                         <ng-container *ngFor="let element of EmojiPeople">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #activityLink class="col-md-12 emoji-title-column">
+                         <span>Activity</span>
+                    </div>
+                    <ng-container *ngIf="Activity.length > 0">
+                         <ng-container *ngFor="let element of Activity">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #flagsLink class="col-md-12 emoji-title-column">
+                         <span>Flags</span>
+                    </div>
+                    <ng-container *ngIf="Flags.length > 0">
+                         <ng-container *ngFor="let element of Flags">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span style="color: #2a76d3" class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #foodDringLink class="col-md-12 emoji-title-column">
+                         <span>Food Dring</span>
+                    </div>
+                    <ng-container *ngIf="FoodDring.length > 0">
+                         <ng-container *ngFor="let element of FoodDring">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #natureLink class="col-md-12 emoji-title-column">
+                         <span>Animals & Nature</span>
+                    </div>
+                    <ng-container *ngIf="Nature.length > 0">
+                         <ng-container *ngFor="let element of Nature">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #objectLinks class="col-md-12 emoji-title-column">
+                         <span>Objects</span>
+                    </div>
+                    <ng-container *ngIf="Objects.length > 0">
+                         <ng-container *ngFor="let element of Objects">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #symbolLinks class="col-md-12 emoji-title-column">
+                         <span>Symbols</span>
+                    </div>
+                    <ng-container *ngIf="Symbols.length > 0">
+                         <ng-container *ngFor="let element of Symbols">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+
+                    <div #travelPlaceLink class="col-md-12 emoji-title-column">
+                         <span>Travel Places</span>
+                    </div>
+                    <ng-container *ngIf="TravelPlaces.length > 0">
+                         <ng-container *ngFor="let element of TravelPlaces">
+                              <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                   <span class="emoji-icon">{{ element.emoji }}</span>
+                              </div>
+                         </ng-container>
+                    </ng-container>
+               </div>
+          </div>
+     </div>
+</ng-container>

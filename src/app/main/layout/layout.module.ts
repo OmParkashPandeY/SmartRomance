@@ -11,6 +11,7 @@ import { LeftMenubarComponent } from '../scroll-pagination/left-menubar/left-men
 import { MainMenubarComponent } from '../scroll-pagination/main-menubar/main-menubar.component';
 import { RightMenubarComponent } from '../scroll-pagination/right-menubar/right-menubar.component';
 import { EmojiPickerComponent } from 'src/app/emoji-picker/emoji-picker.component';
+import { CustomEmojiModule } from 'src/app/custom-emoji/custom-emoji.module';
 
 // prettier-ignore
 @NgModule({
@@ -23,12 +24,14 @@ import { EmojiPickerComponent } from 'src/app/emoji-picker/emoji-picker.componen
     LeftMenubarComponent,
     RightMenubarComponent,
     MainMenubarComponent,
-    EmojiPickerComponent
+    EmojiPickerComponent,
+    
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CustomEmojiModule
   ]
 })
 export class LayoutModule { }
