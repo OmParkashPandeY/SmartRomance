@@ -36,4 +36,9 @@ export class EmojiPickerComponent implements OnInit {
      public pickEmoji(payload: any) {
           this.selectedEmoji = this.selectedEmoji + payload.emoji;
      }
+
+     scrollToElement(element: any): void {
+          console.log(element);
+          element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+     }
 }
