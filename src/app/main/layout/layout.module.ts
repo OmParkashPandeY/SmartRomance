@@ -10,6 +10,7 @@ import { ScrollPaginationComponent } from '../scroll-pagination/scroll-paginatio
 import { LeftMenubarComponent } from '../scroll-pagination/left-menubar/left-menubar.component';
 import { MainMenubarComponent } from '../scroll-pagination/main-menubar/main-menubar.component';
 import { RightMenubarComponent } from '../scroll-pagination/right-menubar/right-menubar.component';
+import { EmojiPickerComponent } from 'src/app/emoji-picker/emoji-picker.component';
 
 // prettier-ignore
 @NgModule({
@@ -22,6 +23,7 @@ import { RightMenubarComponent } from '../scroll-pagination/right-menubar/right-
     LeftMenubarComponent,
     RightMenubarComponent,
     MainMenubarComponent,
+    EmojiPickerComponent
   ],
   imports: [
     CommonModule,

@@ -11,10 +11,7 @@ import { TemplateComponent } from './template/template.component';
 import { FormViewComponent } from './template/form-view/form-view.component';
 import { SidebarViewComponent } from './template/sidebar-view/sidebar-view.component';
 import { TableViewComponent } from './template/table-view/table-view.component';
-import { MainModule } from './main/main.module';
 import { TemplateModule } from './template/template.module';
-import { MainRoutingModule } from './main/main-routing.module';
-import { AdminRoutingModule } from './admin/admin-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { NoPageFoundComponent } from './others/no-page-found/no-page-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // MDB Angular Pro
+// prettier-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormViewComponent,
     SidebarViewComponent,
     TableViewComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
   ],
   imports: [
     BrowserModule,

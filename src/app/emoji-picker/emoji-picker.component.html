@@ -1,0 +1,113 @@
+<div class="container bg-light">
+     <div class="row justify-content-start py-1 my-1">
+          <div class="col-12 my-1">
+               <div>Emoji Picker Example</div>
+          </div>
+          <div class="col-12 my-1">
+               <div class="row">
+                    <div class="col-md-6">
+                         <!-- <input type="text" class="form-control" /> -->
+                         <h1>{{ selectedEmoji }}</h1>
+                    </div>
+               </div>
+          </div>
+          <div class="col-12 my-2">
+               <button class="btn btn-danger py-1 px-3">Pick Emoji</button>
+          </div>
+
+          <div class="col-12 my-2">
+               <div class="emoji-card card shadow-lg noselect">
+                    <div class="row m-0 p-0 emoji-row">
+                         <!-- Emoji People -->
+                         <ng-container *ngIf="EmojiPeople.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>People</span>
+                              </div>
+                              <ng-container *ngFor="let element of EmojiPeople; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Emoji Activity -->
+                         <ng-container *ngIf="Activity.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Activity</span>
+                              </div>
+                              <ng-container *ngFor="let element of Activity; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Emoji Flags -->
+                         <ng-container *ngIf="Flags.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Flags</span>
+                              </div>
+                              <ng-container *ngFor="let element of Flags; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span style="color: #2a76d3" class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Food Dring People -->
+                         <ng-container *ngIf="FoodDring.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Food Dring</span>
+                              </div>
+                              <ng-container *ngFor="let element of FoodDring; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Emoji Nature -->
+                         <ng-container *ngIf="Nature.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Nature</span>
+                              </div>
+                              <ng-container *ngFor="let element of Nature; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Emoji Objects -->
+                         <ng-container *ngIf="Objects.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Objects</span>
+                              </div>
+                              <ng-container *ngFor="let element of Objects; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Emoji Symbols -->
+                         <ng-container *ngIf="Symbols.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Symbols</span>
+                              </div>
+                              <ng-container *ngFor="let element of Symbols; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                         <!-- Emoji TravelPlaces -->
+                         <ng-container *ngIf="TravelPlaces.length > 0">
+                              <div class="col-md-12 emoji-title-column">
+                                   <span>Travel Places</span>
+                              </div>
+                              <ng-container *ngFor="let element of TravelPlaces; index as elementIndex">
+                                   <div (click)="pickEmoji(element)" class="col-2 emoji-column">
+                                        <span class="emoji-icon">{{ element.emoji }}</span>
+                                   </div>
+                              </ng-container>
+                         </ng-container>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
