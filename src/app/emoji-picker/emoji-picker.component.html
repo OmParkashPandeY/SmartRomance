@@ -17,9 +17,11 @@
           <div class="col-6 pt-2">
                <!-- prettier-ignore -->
                <app-custom-emoji 
-                    [marginLeft]="'0px'" 
+                    [marginX]="'60px'" 
+                    [marginY]="'60px'" 
+                    [emojiId]="'MyCustomEmoji'"
+                    [iconClass]="'far fa-grin-alt'"
                     (onSelectEmoji)="getSelectedEmoji($event)"
-                    [buttonHtml]="emojiButton"
                     >
                </app-custom-emoji>
           </div>

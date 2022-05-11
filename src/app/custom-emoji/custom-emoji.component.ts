@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { EmojiList } from '../shared/emoji-list/emoji-list';
 import * as $ from 'jquery';
 @Component({
@@ -7,9 +7,14 @@ import * as $ from 'jquery';
      styleUrls: ['./custom-emoji.component.scss']
 })
 export class CustomEmojiComponent implements OnInit {
+     @ViewChild('customEmojiButton') customEmojiButton: ElementRef;
+     @ViewChild('emojiCardField') emojiCardField: ElementRef;
+
      @Output() onSelectEmoji: EventEmitter<any> = new EventEmitter();
-     @Input() marginLeft: any = '';
-     @Input() buttonHtml: any = '';
+     @Input() marginX: any = '';
+     @Input() marginY: any = '';
+     @Input() emojiId: any = '';
+     @Input() iconClass: any = '';
 
      public styleObject: any = {};
      public emojiList: EmojiList;
@@ -42,7 +47,7 @@ export class CustomEmojiComponent implements OnInit {
      }
 
      public setStyle() {
-          this.styleObject = { 'margin-left': this.marginLeft };
+          this.styleObject = { 'margin-left': this.marginX, 'margin-top': this.marginY };
      }
 
      public pickEmoji(clickedEntry: any): void {
@@ -50,7 +55,7 @@ export class CustomEmojiComponent implements OnInit {
      }
 
      public toggleEmojiCard(status: boolean) {
-          let element = $(this._elementRef.nativeElement).find('#customEmojiCard');
+          let element = $(this._elementRef.nativeElement).find('#' + this.emojiId);
           element.show();
           if (status) {
                element.show();
@@ -61,5 +66,20 @@ export class CustomEmojiComponent implements OnInit {
 
      public scrollToElement(element: any) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+     }
+
+     @HostListener('document:click', ['$event'])
+     onPostDocumentClick(event: MouseEvent) {
+          try {
+               let a = this.customEmojiButton.nativeElement.contains(event.target);
+               let b = this.emojiCardField.nativeElement.contains(event.target);
+
+               if (a || b) {
+               } else {
+                    $(this._elementRef.nativeElement)
+                         .find('#' + this.emojiId)
+                         .hide();
+               }
+          } catch (error) {}
      }
 }

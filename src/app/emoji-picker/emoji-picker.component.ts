@@ -7,7 +7,6 @@ import { EmojiList } from '../shared/emoji-list/emoji-list';
      styleUrls: ['./emoji-picker.component.scss']
 })
 export class EmojiPickerComponent implements OnInit {
-     public emojiButton: any = '<i class="far fa-grin-alt"></i>';
      public selectedEmoji: any = '';
      constructor() {}
      ngOnInit(): void {}

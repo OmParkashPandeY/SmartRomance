@@ -1,9 +1,8 @@
-<span class="emoji-button" (click)="toggleEmojiCard(true)">
-     <!-- <i class="far fa-grin-alt"></i> -->
-     <span [innerHTML]="buttonHtml"></span>
+<span class="emoji-button" #customEmojiButton (click)="toggleEmojiCard(true)">
+     <i [ngClass]="iconClass"></i>
 </span>
 <ng-container>
-     <div id="customEmojiCard" [ngStyle]="styleObject" class="emoji-card card shadow noselect">
+     <div id="{{ emojiId }}" #emojiCardField [ngStyle]="styleObject" class="emoji-card card shadow noselect">
           <div class="card-header">
                <div class="header-icon-button">
                     <div class="action-button" (click)="scrollToElement(peopleLink)">
