@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     RegistrationComponent,
     ProfileComponent,
+   
 
   
 

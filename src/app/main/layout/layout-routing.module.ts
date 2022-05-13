@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmojiPickerComponent } from 'src/app/emoji-picker/emoji-picker.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { DragableCardComponent } from '../dragable-card/dragable-card.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { RegistrationComponent } from '../registration/registration.component';
 import { ScrollPaginationComponent } from '../scroll-pagination/scroll-pagination.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
                {
                     path: 'scroll-pagination',
                     component: ScrollPaginationComponent
+               },
+               {
+                    path: 'drag-drop',
+                    component: DragableCardComponent
                }
           ]
      }

@@ -3,32 +3,40 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
 .hoverTooltip {
-    position: relative;
-    display: inline-block;
-  
-  }
-  
-  .hoverTooltip .hoverTooltiptext {
-    visibility: hidden;
-    width: 100px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-  }
+  position: relative;
+  display: inline-block;
 
-  .hoverTooltip:hover .hoverTooltiptext {
-    visibility: visible;
-  }
+}
+
+.hoverTooltip .hoverTooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.hoverTooltip:hover .hoverTooltiptext {
+  visibility: visible;
+}
