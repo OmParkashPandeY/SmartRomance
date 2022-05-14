@@ -1,0 +1,153 @@
+.homepage {
+  overflow: hidden;
+}
+
+.top-section {
+  height: 120%;
+  width: 100%;
+  background-image: url('../../assets/Image/home/photo/header-hero-crop.jpg');
+
+  .home-page-header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    transition: 400ms;
+    z-index: 100;
+
+
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0px;
+
+      .action-button {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        a {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
+
+  .home-page-header:hover {
+    transition: 400ms !important;
+    background-color: white !important;
+    box-shadow: 10px 10px 10px #c1bfbf !important;
+  }
+
+  .header-row {
+    margin: 0px;
+    padding: 0px;
+
+    .network-short-info {
+      .container {
+        padding-top: 100px;
+      }
+
+      .network-info-text {
+        line-height: 1.08;
+
+        .your-text {
+          font-size: 50px;
+          font-weight: 600;
+        }
+
+        .network-text {
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        .partner-text {
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        .create-text {
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        .learn-text {
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        .sell-text {
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        .and-text {
+          font-size: 50px;
+          font-weight: 600;
+        }
+
+        .explore-text {
+          font-size: 50px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .network-hero-image {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.middle-section-first {
+  min-height: 100vh;
+  background-color: #edf3f6;
+
+}
+
+.middle-section-second {
+  min-height: 30vh;
+  background-color: #edf3f6;
+
+}
+
+.middle-section-third {
+  min-height: 50vh;
+  background-color: #edf3f6;
+
+  .features-and-customize-card {
+    padding: 16px;
+    min-height: 300px;
+    background-color: #edf3f6;
+    border: none;
+  }
+
+}
+
+.middle-section-fourth {
+  min-height: 100vh;
+  background-color: #edf3f6;
+
+  .pricing-plan-card {
+    padding: 12px;
+    min-height: 500px;
+    background-color: #edf3f6;
+    border: none;
+  }
+}
+
+.middle-section-fifth {
+  min-height: 40vh;
+  background-color: #edf3f6;
+}
+
+.footer-section {
+  min-height: 80vh;
+  background-color: #edf3f6;
+
+}

@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NetworkHomePageComponent } from './network-home-page/network-home-page.component';
 
 // MDB Angular Pro
 // prettier-ignore
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarViewComponent,
     TableViewComponent,
     NoPageFoundComponent,
+    NetworkHomePageComponent,
    
   ],
   imports: [
