@@ -1,15 +1,15 @@
-<!-- <div class="example-box" appFreeDragging>Drag me around</div> -->
-
-<div class="card example-box" appFreeDragging>
-     <div class="card-header" appFreeDraggingHandle>
-          <span class="move-icon">
-               <i class="fas fa-arrows-alt"></i>
-          </span>
+<ng-container *ngIf="isShowEmoji">
+     <div class="card example-box" appFreeDragging [currentX]="610" [currentY]="140">
+          <div class="card-header" appFreeDraggingHandle>
+               <span (click)="showHideEmojiCard(false)" class="move-icon">
+                    <i class="fas fa-times"></i>
+               </span>
+          </div>
+          <div class="card-body">
+               <h2>Hello World</h2>
+          </div>
      </div>
-     <div class="card-body">
-          <h2>Hello World</h2>
-     </div>
-</div>
+</ng-container>
 
 <div class="container">
      <div class="row">
@@ -30,6 +30,11 @@
           </div>
           <div class="col-md-4 p-2 mt-2">
                <div class="card bg-light p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sit, laboriosam ipsam alias odio aut minima culpa nihil sed tempore dignissimos, eaque beatae qui, ex quisquam porro. Esse, molestias ducimus?</div>
+          </div>
+          <div class="col-md-4 p-2 mt-2">
+               <button class="btn btn-danger py1 px-4" (click)="showHideEmojiCard(true)">
+                    <span>Show Emoji</span>
+               </button>
           </div>
      </div>
 </div>

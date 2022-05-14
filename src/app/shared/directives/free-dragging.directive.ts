@@ -7,15 +7,18 @@ import { DOCUMENT } from '@angular/common';
      selector: '[appFreeDragging]'
 })
 export class FreeDraggingDirective implements AfterViewInit, OnDestroy {
-     @ContentChild(FreeDraggingHandleDirective) handle: FreeDraggingHandleDirective;
+     @ContentChild(FreeDraggingHandleDirective) handler: FreeDraggingHandleDirective;
 
      public draggingBoundaryElement: HTMLElement | HTMLBodyElement;
      public readonly boundary = 'body';
      @Input() boundaryQuery = this.boundary;
 
+     @Input() currentX: number = 0;
+     @Input() currentY: number = 0;
+
+     public element: HTMLElement;
      public handleElement: HTMLElement;
      public subscriptions: Subscription[] = [];
-     public element: HTMLElement;
 
      // prettier-ignore
      constructor(
@@ -27,10 +30,10 @@ export class FreeDraggingDirective implements AfterViewInit, OnDestroy {
      ngAfterViewInit(): void {
           this.draggingBoundaryElement = (this.document as Document).querySelector(this.boundaryQuery);
           if (!this.draggingBoundaryElement) {
-               throw new Error("Couldn't find any element with query: " + this.boundaryQuery);
+               console.log("Couldn't find any element with query: " + this.boundaryQuery);
           } else {
                this.element = this.elementRef.nativeElement as HTMLElement;
-               this.handleElement = this.handle?.elementRef?.nativeElement || this.element;
+               this.handleElement = this.handler?.elementRef?.nativeElement || this.element;
                this.initDrag();
           }
      }
@@ -42,8 +45,8 @@ export class FreeDraggingDirective implements AfterViewInit, OnDestroy {
 
           let initialX: number,
                initialY: number,
-               currentX = 610,
-               currentY = 140;
+               currentX = this.currentX,
+               currentY = this.currentY;
 
           let dragSub: Subscription;
 
