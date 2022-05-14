@@ -1,7 +1,7 @@
-import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, ContentChild, Directive, ElementRef, Inject, Input, OnDestroy } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
 import { FreeDraggingHandleDirective } from './free-dragging-handle.directive';
+import { fromEvent, Subscription } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 @Directive({
      selector: '[appFreeDragging]'
@@ -42,8 +42,8 @@ export class FreeDraggingDirective implements AfterViewInit, OnDestroy {
 
           let initialX: number,
                initialY: number,
-               currentX = 0,
-               currentY = 0;
+               currentX = 610,
+               currentY = 140;
 
           let dragSub: Subscription;
 
