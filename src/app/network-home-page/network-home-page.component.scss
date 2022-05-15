@@ -37,7 +37,7 @@
         .link-button {
           margin-top: auto;
           margin-bottom: auto;
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 800;
 
           a {
@@ -195,6 +195,54 @@
   min-height: 100vh;
   background-color: #edf3f6;
 
+  .tabbar-button {
+    display: flex;
+    justify-content: center;
+
+    .e-commerce-network {
+      color: red;
+      display: flex;
+      justify-content: center;
+      border-bottom: 3px solid #6150c8;
+
+      cursor: pointer;
+
+      .tab-icon {
+        font-size: 35px;
+        padding: 2px 2px 10px 10px;
+      }
+
+      .button-text {
+        font-size: 25px;
+        padding: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .education-network {
+      display: flex;
+      color: grey;
+      justify-content: center;
+
+      cursor: pointer;
+
+      .tab-icon {
+        font-size: 35px;
+        padding: 2px 2px 10px 10px;
+      }
+
+      .button-text {
+        font-size: 25px;
+        padding: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
 }
 
 .middle-section-second {
@@ -308,6 +356,10 @@
   }
 }
 
+.header-mobile-image {
+  display: none;
+}
+
 // ----------------------------------------------------------------------------------------
 
 @media (max-width: 992px) {
@@ -320,12 +372,35 @@
   .menu-button {
     display: inline-block !important;
   }
+
 }
 
 @media (max-width: 768px) {
   .create-network-button {
     display: none;
+
   }
+
+  .e-commerce-network {
+    .tab-icon {
+      display: none;
+    }
+
+    .button-text {
+      font-size: 18px !important;
+    }
+  }
+
+  .education-network {
+    .tab-icon {
+      display: none;
+    }
+
+    .button-text {
+      font-size: 18px !important;
+    }
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -335,6 +410,26 @@
 
   .header-mobile-image {
     display: inline-block !important;
+  }
+
+  .e-commerce-network {
+    .tab-icon {
+      display: none;
+    }
+
+    .button-text {
+      font-size: 14px !important;
+    }
+  }
+
+  .education-network {
+    .tab-icon {
+      display: none;
+    }
+
+    .button-text {
+      font-size: 14px !important;
+    }
   }
 
 }

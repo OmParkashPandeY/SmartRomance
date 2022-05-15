@@ -11,6 +11,7 @@ export class NetworkHomePageComponent implements OnInit {
      @ViewChild('sidebarButton') sidebarButton: ElementRef;
      @ViewChild('homepageSidebar') homepageSidebar: ElementRef;
 
+     public isShowEducationNetworkBanner: boolean = false;
      // prettier-ignore
      constructor(
           private _elementRef: ElementRef,
@@ -27,6 +28,21 @@ export class NetworkHomePageComponent implements OnInit {
           } else {
                element.css({ 'margin-left': '-280px' });
           }
+     }
+
+     public eCommerceNetwork() {
+          let ecommerce = $(this._elementRef.nativeElement).find('.e-commerce-network');
+          let education = $(this._elementRef.nativeElement).find('.education-network');
+          ecommerce.css({ color: 'red', 'border-bottom': '3px solid #6150c8' });
+          education.css({ color: 'grey', 'border-bottom': '3px solid transparent' });
+          this.isShowEducationNetworkBanner = false;
+     }
+     public educationNetwork() {
+          let ecommerce = $(this._elementRef.nativeElement).find('.e-commerce-network');
+          let education = $(this._elementRef.nativeElement).find('.education-network');
+          education.css({ color: 'red', 'border-bottom': '3px solid #6150c8' });
+          ecommerce.css({ color: 'grey', 'border-bottom': '3px solid transparent' });
+          this.isShowEducationNetworkBanner = true;
      }
 
      @HostListener('window:scroll', ['$event'])
