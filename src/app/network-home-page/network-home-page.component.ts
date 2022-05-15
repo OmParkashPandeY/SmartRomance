@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
 import * as AOS from 'aos';
 
@@ -8,6 +8,9 @@ import * as AOS from 'aos';
      styleUrls: ['./network-home-page.component.scss']
 })
 export class NetworkHomePageComponent implements OnInit {
+     @ViewChild('sidebarButton') sidebarButton: ElementRef;
+     @ViewChild('homepageSidebar') homepageSidebar: ElementRef;
+
      // prettier-ignore
      constructor(
           private _elementRef: ElementRef,
@@ -15,6 +18,15 @@ export class NetworkHomePageComponent implements OnInit {
 
      ngOnInit(): void {
           AOS.init();
+     }
+
+     public showHideSidebar(status: boolean) {
+          let element = $(this._elementRef.nativeElement).find('#homepage-sidebar');
+          if (status) {
+               element.css({ 'margin-left': '0px' });
+          } else {
+               element.css({ 'margin-left': '-280px' });
+          }
      }
 
      @HostListener('window:scroll', ['$event'])
@@ -32,6 +44,19 @@ export class NetworkHomePageComponent implements OnInit {
                          'background-color': 'transparent',
                          'box-shadow': 'none'
                     });
+               }
+          } catch (error) {}
+     }
+
+     @HostListener('document:click', ['$event'])
+     onPostDocumentClick(event: MouseEvent) {
+          try {
+               let a = this.sidebarButton.nativeElement.contains(event.target);
+               let b = this.homepageSidebar.nativeElement.contains(event.target);
+
+               if (a || b) {
+               } else {
+                    this.showHideSidebar(false);
                }
           } catch (error) {}
      }

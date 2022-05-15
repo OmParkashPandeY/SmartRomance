@@ -21,16 +21,103 @@
       justify-content: space-between;
       padding: 8px 0px;
 
+      .header-image {
+        img {
+          height: 50px;
+        }
+      }
+
       .action-button {
         display: flex;
         justify-content: space-between;
         margin-top: auto;
         margin-bottom: auto;
+        width: 100%;
 
-        a {
+        .link-button {
           margin-top: auto;
           margin-bottom: auto;
+          font-size: 18px;
+          font-weight: 800;
+
+          a {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #818181;
+            text-decoration: none;
+            transition: all .3s ease-out 0s;
+            font-family: 'Radio Canada', sans-serif;
+          }
+
+          a:hover {
+            transition: 200ms;
+            color: #353539;
+          }
+
         }
+
+        .tag-button {
+          width: 100%;
+          display: flex;
+          margin-top: auto;
+          margin-bottom: auto;
+          justify-content: flex-end;
+
+          .btn {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            border: none;
+            padding: 6px 16px;
+            background-color: #483d8b;
+            border-radius: 25px;
+            color: white;
+
+          }
+
+          .create-network-button {
+            margin-right: 10px;
+          }
+
+          .login-button {
+            .login-icon {
+              margin-left: 10px;
+            }
+          }
+
+          .btn:hover {
+            transition: 200ms;
+            background-color: #352c6b;
+          }
+
+          .btn:focus,
+          .btn.focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+          }
+
+          .menu-button {
+            display: none;
+            font-size: 28px;
+            margin-top: 4px;
+            margin-left: 16px;
+            color: grey;
+            cursor: pointer;
+          }
+
+          .menu-button:hover {
+            color: #353539;
+            transition: 200ms;
+          }
+        }
+
+
+
       }
     }
   }
@@ -149,5 +236,105 @@
 .footer-section {
   min-height: 80vh;
   background-color: #edf3f6;
+
+}
+
+
+
+// ----------------------------------------------------------------------------------------
+.home-page-sidebar {
+  width: 280px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  z-index: 120;
+  transition: 500ms;
+  margin-left: -280px;
+  background-color: #483d8b;
+
+  .header-row {
+    background-color: #edf3f6;
+    padding: 13px 0px;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: start;
+
+    .navigation-back-icon {
+      padding-top: 10px;
+
+      span {
+        font-size: 20px;
+        color: #483d8b;
+        padding: 10px
+      }
+    }
+
+    .application-icon {
+      img {
+        height: 40px;
+      }
+    }
+  }
+
+  .button-text {
+    color: white;
+    font-size: 18px;
+    padding: 12px 8px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: all .3s ease-out 0s;
+      font-family: 'Radio Canada', sans-serif;
+      display: flex;
+      justify-content: flex-start;
+
+      .button-icon {
+        width: 24px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .button-row:hover {
+    transition: 200ms;
+    background-color: #b7d5ec !important;
+
+    a {
+      color: #484848;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------------------
+
+@media (max-width: 992px) {
+  .link-button {
+    a {
+      display: none;
+    }
+  }
+
+  .menu-button {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-network-button {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-window-image {
+    display: none;
+  }
+
+  .header-mobile-image {
+    display: inline-block !important;
+  }
 
 }

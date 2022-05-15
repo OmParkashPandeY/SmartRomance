@@ -7,36 +7,38 @@
                          <div class="col-md-12">
                               <div class="header">
                                    <div class="header-image">
-                                        <img src="../../assets/Image/home/photo/workstudio-logo-full.png" alt="" />
+                                        <img class="header-window-image" src="../../assets/Image/home/photo/workstudio-logo-full.png" alt="" />
+                                        <img class="header-mobile-image" src="../../assets/Image/home/photo/logo-bt.png" alt="" />
                                    </div>
                                    <div class="action-button">
-                                        <a href="#">
-                                             <b class="mx-4">
+                                        <div class="link-button">
+                                             <a href="#">
                                                   <span>Home</span>
-                                             </b>
-                                        </a>
-                                        <a href="#">
-                                             <b class="mx-4">
-                                                  <span> Services </span>
-                                             </b>
-                                        </a>
-                                        <a href="#">
-                                             <b class="mx-4">
-                                                  <span> Why Us </span>
-                                             </b>
-                                        </a>
-                                        <a href="#">
-                                             <b class="mx-4">
-                                                  <span> Pricing </span>
-                                             </b>
-                                        </a>
-                                        <a href="#">
-                                             <b class="mx-4">
-                                                  <span> Contact </span>
-                                             </b>
-                                        </a>
-                                        <button class="btn btn-primary mr-2">Create your Network</button>
-                                        <button class="btn btn-primary">Login</button>
+                                             </a>
+                                             <a href="#">
+                                                  <span>Services</span>
+                                             </a>
+                                             <a href="#">
+                                                  <span>Why Us</span>
+                                             </a>
+                                             <a href="#">
+                                                  <span>Pricing</span>
+                                             </a>
+                                             <a href="#">
+                                                  <span>Contact</span>
+                                             </a>
+                                        </div>
+                                        <div class="tag-button">
+                                             <button class="btn create-network-button">
+                                                  <span> Create your Network </span>
+                                             </button>
+                                             <button class="btn login-button">
+                                                  <span class="login-text"> Login </span>
+                                             </button>
+                                             <span #sidebarButton (click)="showHideSidebar(true)" class="menu-button">
+                                                  <i class="fas fa-align-right"></i>
+                                             </span>
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -54,7 +56,7 @@
                          <div class="row justify-content-end">
                               <div data-aos="fade-up" data-aos-duration="2000" class="col-md-10 network-info-text">
                                    <div>
-                                        <span class="your-text">Your&nbsp;</span>
+                                        <span class="your-text" style="color: red">Your&nbsp;</span>
                                         <span class="network-text">Network&nbsp;</span>
                                         <span class="partner-text">Partner to&nbsp;</span>
                                    </div>
@@ -254,7 +256,7 @@
                          <div class="container">
                               <div class="row">
                                    <div class="col-md-12">
-                                        <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="card pricing-plan-card shadow">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, temporibus labore alias sunt, harum tenetur quam dolorum qui eaque accusamus rem veniam ab quod explicabo! Molestiae voluptatum quam ducimus? Consequuntur!</div>
+                                        <div data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000" class="card pricing-plan-card shadow">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, temporibus labore alias sunt, harum tenetur quam dolorum qui eaque accusamus rem veniam ab quod explicabo! Molestiae voluptatum quam ducimus? Consequuntur!</div>
                                    </div>
                               </div>
                          </div>
@@ -336,6 +338,86 @@
                               <label for=""> <i class="fas fa-comment-alt-lines"></i> Your Message</label>
                               <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Enter your message..."></textarea>
                          </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------- -->
+<div #homepageSidebar id="homepage-sidebar" class="home-page-sidebar">
+     <div class="container">
+          <div class="row header-row">
+               <div class="col-md-12">
+                    <div class="sidebar-header">
+                         <div class="application-icon">
+                              <img src="../../assets/Image/home/photo/workstudio-logo-full.png" alt="" />
+                         </div>
+                         <div class="navigation-back-icon">
+                              <span (click)="showHideSidebar(false)">
+                                   <i class="fas fa-times"></i>
+                              </span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="row button-row">
+               <div class="col-md-12">
+                    <div class="button-text">
+                         <a href="">
+                              <span class="button-icon">
+                                   <i class="fas fa-home"></i>
+                              </span>
+                              <span>Home</span>
+                         </a>
+                    </div>
+               </div>
+          </div>
+          <div class="row button-row">
+               <div class="col-md-12">
+                    <div class="button-text">
+                         <a href="">
+                              <span class="button-icon">
+                                   <i class="fas fa-user-cog"></i>
+                              </span>
+                              <span>Services</span>
+                         </a>
+                    </div>
+               </div>
+          </div>
+          <div class="row button-row">
+               <div class="col-md-12">
+                    <div class="button-text">
+                         <a href="">
+                              <span class="button-icon">
+                                   <i class="fas fa-question"></i>
+                              </span>
+                              <span>Why Us</span>
+                         </a>
+                    </div>
+               </div>
+          </div>
+          <div class="row button-row">
+               <div class="col-md-12">
+                    <div class="button-text">
+                         <a href="">
+                              <span class="button-icon">
+                                   <i class="fas fa-dollar-sign"></i>
+                              </span>
+                              <span>Pricing</span>
+                         </a>
+                    </div>
+               </div>
+          </div>
+          <div class="row button-row">
+               <div class="col-md-12">
+                    <div class="button-text">
+                         <a href="">
+                              <span class="button-icon">
+                                   <i class="fas fa-phone-alt"></i>
+                              </span>
+                              <span>Contact</span>
+                         </a>
                     </div>
                </div>
           </div>
