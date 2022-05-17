@@ -5,7 +5,7 @@
 .top-section {
 
   width: 100%;
-  padding-bottom: 75px;
+  padding-bottom: 100px;
   background-image: url('../../assets/Image/home/photo/header-hero-crop.jpg');
 
   .home-page-header {
@@ -246,8 +246,87 @@
 }
 
 .middle-section-first {
+
   min-height: 100vh;
   background-color: #edf3f6;
+
+  .tabbar-column {
+    .our-service {
+      font-size: 20px;
+      color: #4f4fa5;
+      padding: 16px 0px;
+    }
+
+    .tab-network-bussiness-text {
+      line-height: 1.4;
+
+      .tab-network-text {
+        font-size: 45px;
+        font-weight: 700;
+        color: #483d8b;
+        font-family: 'Fugaz One', cursive;
+      }
+
+      .tab-business-text {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: 'Fugaz One', cursive;
+      }
+    }
+
+  }
+
+  .commerce-bussiness-groth-column {
+    .e-commerce-bussiness-groth-text {
+      line-height: 1.2;
+
+      .e-commerce-text {
+        font-size: 45px;
+        font-weight: 700;
+        color: #483d8b;
+        font-family: 'Fugaz One', cursive;
+      }
+
+      .business-text {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: 'Fugaz One', cursive;
+      }
+    }
+
+    .inline-text {
+      font-size: 16px;
+      color: grey;
+      line-height: 1.4;
+      padding: 16px 0px;
+    }
+  }
+
+  .edu-network-online-class-column {
+    .edu-network-online-class-text {
+      line-height: 1.2;
+
+      .edu-network-text {
+        font-size: 45px;
+        font-weight: 700;
+        color: #483d8b;
+        font-family: 'Fugaz One', cursive;
+      }
+
+      .online-class-text {
+        font-size: 40px;
+        font-weight: 500;
+        font-family: 'Fugaz One', cursive;
+      }
+    }
+
+    .inline-text {
+      font-size: 16px;
+      color: grey;
+      line-height: 1.4;
+      padding: 16px 0px;
+    }
+  }
 
   .tabbar-button {
     display: flex;
@@ -561,4 +640,41 @@
     font-size: 30px !important;
     ;
   }
+
+  .commerce-bussiness-groth-column {
+    padding: 36px 10px;
+
+    .e-commerce-bussiness-groth-text {
+      .e-commerce-text {
+        font-size: 35px !important;
+      }
+
+      .business-text {
+        font-size: 30px !important;
+      }
+    }
+
+    .inline-text {
+      font-size: 14px !important;
+    }
+  }
+
+  .edu-network-online-class-column {
+    padding: 36px 10px;
+
+    .edu-network-online-class-text {
+      .edu-network-text {
+        font-size: 35px !important;
+      }
+
+      .online-class-text {
+        font-size: 30px !important;
+      }
+    }
+
+    .inline-text {
+      font-size: 14px !important;
+    }
+  }
+
 }

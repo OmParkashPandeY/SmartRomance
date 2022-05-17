@@ -102,15 +102,15 @@
           <div data-aos="fade-up" data-aos-duration="1000" class="container">
                <div class="row">
                     <div class="col-md-12">
-                         <div style="height: 60px"></div>
+                         <div style="height: 120px"></div>
                     </div>
-                    <div class="col-md-12">
-                         <div class="text-center">
+                    <div class="col-md-12 tabbar-column">
+                         <div class="text-center our-service">
                               <span> OUR SERVICES </span>
                          </div>
-                         <div class="text-center">
-                              <b>Networks </b>
-                              <span> to spread Your Business </span>
+                         <div class="text-center tab-network-bussiness-text">
+                              <span class="tab-network-text">Networks </span>
+                              <span class="tab-business-text"> to spread Your Business </span>
                          </div>
                     </div>
                     <div class="col-md-12">
@@ -118,7 +118,7 @@
                     </div>
                     <div class="col-md-12">
                          <div class="tabbar-button">
-                              <div (click)="eCommerceNetwork()" class="e-commerce-network">
+                              <div data-aos="fade-down-right" data-aos-duration="1000" (click)="eCommerceNetwork()" class="e-commerce-network">
                                    <div class="tab-icon">
                                         <i class="fas fa-briefcase"></i>
                                    </div>
@@ -126,7 +126,7 @@
                                         <span> E-Commerce Network </span>
                                    </div>
                               </div>
-                              <div (click)="educationNetwork()" class="education-network">
+                              <div data-aos="fade-down-left" data-aos-duration="1000" (click)="educationNetwork()" class="education-network">
                                    <div class="tab-icon">
                                         <i class="fas fa-graduation-cap"> </i>
                                    </div>
@@ -142,22 +142,22 @@
                          <div style="height: 60px"></div>
                     </div>
                </div>
-               <div data-aos="fade-up-right" data-aos-duration="1000" *ngIf="!isShowEducationNetworkBanner" class="row">
+               <div class="row" data-aos="fade-up-right" data-aos-duration="1000" *ngIf="!isShowEducationNetworkBanner">
                     <div class="col-md-6">
                          <img width="100%" src="../../assets/Image/home/photo/our-service-1.jpg" alt="" />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 commerce-bussiness-groth-column">
                          <div class="px-3">
-                              <div>
-                                   <b>E- Commerce Network </b>
-                                   <span> for Your Business Growth. </span>
+                              <div class="e-commerce-bussiness-groth-text">
+                                   <span class="e-commerce-text">E- Commerce Network </span>
+                                   <span class="business-text"> for Your Business Growth. </span>
                               </div>
                               <br />
-                              <div>
+                              <div class="inline-text">
                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec est arcu. Maecenas semper tortor.</p>
                               </div>
                               <br />
-                              <div>
+                              <div class="inline-text">
                                    <p>In elementum in risus sed commodo. Phasellus nisi ligula, luctus at tempor vitae, placerat at ante. Cras sed consequat justo. Curabitur laoreet eu est vel convallis.</p>
                               </div>
                          </div>
@@ -168,18 +168,18 @@
                     <div class="col-md-6">
                          <img width="100%" src="../../assets/Image/home/photo/our-service-2.jpg" alt="" />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 edu-network-online-class-column">
                          <div class="px-3">
-                              <div>
-                                   <b>Education Network </b>
-                                   <span> for online classes. </span>
+                              <div class="edu-network-online-class-text">
+                                   <span class="edu-network-text">Education Network </span>
+                                   <span class="online-class-text"> for online classes. </span>
                               </div>
                               <br />
-                              <div>
+                              <div class="inline-text">
                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec est arcu. Maecenas semper tortor.</p>
                               </div>
                               <br />
-                              <div>
+                              <div class="inline-text">
                                    <p>In elementum in risus sed commodo. Phasellus nisi ligula, luctus at tempor vitae, placerat at ante. Cras sed consequat justo. Curabitur laoreet eu est vel convallis.</p>
                               </div>
                          </div>
