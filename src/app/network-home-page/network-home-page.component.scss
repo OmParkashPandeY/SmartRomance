@@ -655,6 +655,46 @@ $cursiveFontFamily : 'cursive';
   padding-bottom: 200px;
   background-color: #edf3f6;
 
+  .leave-a-message-column {
+    .message-icon {
+      color: #483d8b;
+      font-size: 30px;
+      padding-right: 10px;
+    }
+
+    .leave-text {
+      font-size: 28px;
+      font-weight: normal;
+      color: #483d8b;
+      font-family: $cursiveFugazOne, $cursiveFontFamily;
+    }
+
+    .a-message-text {
+      font-size: 28px;
+      font-weight: normal;
+      color: #313030;
+      font-family: $cursiveFugazOne, $cursiveFontFamily;
+    }
+
+  }
+
+  .title {
+
+    label {
+      padding: 0px 0px;
+      font-size: 16px;
+      color: #313030;
+    }
+
+    input {
+      height: 60px;
+      border: none;
+    }
+
+    textarea {
+      border: none;
+    }
+  }
 }
 
 
@@ -830,6 +870,10 @@ $cursiveFontFamily : 'cursive';
     ;
   }
 
+  .pricing-middle-card {
+    padding: 0px 20px !important;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -912,6 +956,10 @@ $cursiveFontFamily : 'cursive';
     .inline-text {
       font-size: 14px !important;
     }
+  }
+
+  .pricing-middle-card {
+    padding: 0px 6px !important;
   }
 
 }

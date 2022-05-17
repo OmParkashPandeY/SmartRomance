@@ -334,7 +334,7 @@
                </div>
                <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 contact-location-mail-phone-column">
-                         <div class="contact-location">
+                         <div data-aos="fade-down-right" data-aos-duration="1000" class="contact-location">
                               <div class="location-icon">
                                    <span class="icon">
                                         <i class="fas fa-map-marker-alt"></i>
@@ -346,7 +346,7 @@
                          </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 contact-location-mail-phone-column">
-                         <div class="contact-mail">
+                         <div data-aos="fade-up" data-aos-duration="1000" class="contact-mail">
                               <div class="mail-icon">
                                    <span class="icon">
                                         <i class="fas fa-envelope-open-text"></i>
@@ -359,7 +359,7 @@
                          </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 contact-location-mail-phone-column">
-                         <div class="contact-phone">
+                         <div data-aos="fade-down-left" data-aos-duration="1000" class="contact-phone">
                               <div class="phone-icon">
                                    <span class="icon">
                                         <i class="fas fa-phone-alt"></i>
@@ -377,21 +377,30 @@
      <!-- --------------------------------------------------------------------------------------------------- -->
 
      <div class="footer-section">
-          <div data-aos-offset="500" data-aos="fade-up" data-aos-duration="1000" class="container">
+          <div class="container">
                <div class="row">
-                    <div class="col-md-12">
-                         <h1><i class="far fa-envelope"></i> Leave A Message</h1>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="col-md-12 leave-a-message-column">
+                         <span class="message-icon">
+                              <i class="far fa-envelope"></i>
+                         </span>
+                         <span class="leave-text"> Leave </span>
+                         <span class="a-message-text"> A Message </span>
                     </div>
                </div>
                <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
+                         <div style="height: 50px"></div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div data-aos="fade-down-right" data-aos-duration="1000" class="col-md-6">
                          <div class="title">
                               <label for="">Enter Your Name</label>
                               <input type="text" class="form-control" placeholder="Full Name" />
                          </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div data-aos="fade-down-left" data-aos-duration="1000" class="col-md-6">
                          <div class="title">
                               <label for="">Enter Your Name</label>
                               <input type="text" class="form-control" placeholder="Email" />
@@ -400,6 +409,11 @@
                </div>
                <div class="row">
                     <div class="col-md-12">
+                         <div style="height: 30px"></div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div data-aos="fade-down" data-aos-duration="1000" class="col-md-12">
                          <div class="title">
                               <label for=""> <i class="fas fa-comment-alt-lines"></i> Your Message</label>
                               <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Enter your message..."></textarea>
