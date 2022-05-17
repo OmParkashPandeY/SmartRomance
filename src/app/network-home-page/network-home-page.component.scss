@@ -3,8 +3,9 @@
 }
 
 .top-section {
-  height: 120%;
+
   width: 100%;
+  padding-bottom: 75px;
   background-image: url('../../assets/Image/home/photo/header-hero-crop.jpg');
 
   .home-page-header {
@@ -141,43 +142,96 @@
         line-height: 1.08;
 
         .your-text {
-          font-size: 50px;
-          font-weight: 600;
+          font-size: 45px;
+          font-weight: 500;
+          font-family: 'Fugaz One', cursive;
+
         }
 
         .network-text {
           font-size: 50px;
           font-weight: 700;
+          font-family: 'Fugaz One', cursive;
+          color: #483d8b;
         }
 
         .partner-text {
-          font-size: 50px;
-          font-weight: 700;
+          font-size: 45px;
+          color: #444444;
+          font-weight: normal;
+          font-family: 'Fugaz One', cursive;
         }
+
+        .to-text {
+          font-size: 45px;
+          font-weight: normal;
+          font-family: 'Fugaz One', cursive;
+        }
+
+
 
         .create-text {
           font-size: 50px;
           font-weight: 700;
+          color: #444444;
+          font-family: 'Fugaz One', cursive;
         }
 
         .learn-text {
           font-size: 50px;
           font-weight: 700;
+          color: #444444;
+          font-family: 'Fugaz One', cursive;
         }
 
         .sell-text {
           font-size: 50px;
           font-weight: 700;
+          color: #444444;
+          font-family: 'Fugaz One', cursive;
         }
 
         .and-text {
-          font-size: 50px;
+          font-size: 45px;
           font-weight: 600;
+          font-family: 'Fugaz One', cursive;
         }
 
         .explore-text {
           font-size: 50px;
           font-weight: 600;
+          font-family: 'Fugaz One', cursive;
+          color: #483d8b;
+        }
+      }
+
+      .network-inline-info {
+        padding: 40px 10px;
+
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          color: grey;
+        }
+      }
+
+      .explore-input-field {
+        padding: 50px 10px;
+
+        input {
+          border-radius: 50px;
+          font-size: 18px;
+        }
+
+        .explore-button {
+          button {
+            float: right;
+            border-radius: 50px;
+            color: white;
+            padding: 8px 25px;
+            margin-top: -42px;
+            background-color: darkslateblue;
+          }
         }
       }
     }
@@ -361,6 +415,31 @@
 }
 
 // ----------------------------------------------------------------------------------------
+// @media only screen and (max-width: 600px) {
+//   body {
+//     background-color: lightblue;
+//   }
+// }
+@media (max-width: 1200px) {
+
+  .network-text,
+  .explore-text {
+    font-size: 45px !important;
+
+  }
+
+  .your-text,
+  .create-text,
+  .learn-text,
+  .sell-text,
+  .and-text,
+  .partner-text,
+  .to-text {
+    font-size: 40px !important;
+    ;
+  }
+
+}
 
 @media (max-width: 992px) {
   .link-button {
@@ -371,6 +450,23 @@
 
   .menu-button {
     display: inline-block !important;
+  }
+
+  .network-text,
+  .explore-text {
+    font-size: 55px !important;
+
+  }
+
+  .your-text,
+  .create-text,
+  .learn-text,
+  .sell-text,
+  .and-text,
+  .partner-text,
+  .to-text {
+    font-size: 50px !important;
+    ;
   }
 
 }
@@ -399,6 +495,23 @@
     .button-text {
       font-size: 18px !important;
     }
+  }
+
+  .network-text,
+  .explore-text {
+    font-size: 50px !important;
+
+  }
+
+  .your-text,
+  .create-text,
+  .learn-text,
+  .sell-text,
+  .and-text,
+  .partner-text,
+  .to-text {
+    font-size: 45px !important;
+    ;
   }
 
 }
@@ -432,4 +545,20 @@
     }
   }
 
+  .network-text,
+  .explore-text {
+    font-size: 35px !important;
+
+  }
+
+  .your-text,
+  .create-text,
+  .learn-text,
+  .sell-text,
+  .and-text,
+  .partner-text,
+  .to-text {
+    font-size: 30px !important;
+    ;
+  }
 }
