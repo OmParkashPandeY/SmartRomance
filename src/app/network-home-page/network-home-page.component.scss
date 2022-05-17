@@ -1,3 +1,6 @@
+$cursiveFugazOne : 'Fugaz One';
+$cursiveFontFamily : 'cursive';
+
 .homepage {
   overflow: hidden;
 }
@@ -144,14 +147,14 @@
         .your-text {
           font-size: 45px;
           font-weight: 500;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
 
         }
 
         .network-text {
           font-size: 50px;
           font-weight: 700;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
           color: #483d8b;
         }
 
@@ -159,13 +162,13 @@
           font-size: 45px;
           color: #444444;
           font-weight: normal;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
         }
 
         .to-text {
           font-size: 45px;
           font-weight: normal;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
         }
 
 
@@ -174,33 +177,33 @@
           font-size: 50px;
           font-weight: 700;
           color: #444444;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
         }
 
         .learn-text {
           font-size: 50px;
           font-weight: 700;
           color: #444444;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
         }
 
         .sell-text {
           font-size: 50px;
           font-weight: 700;
           color: #444444;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
         }
 
         .and-text {
           font-size: 45px;
           font-weight: 600;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
         }
 
         .explore-text {
           font-size: 50px;
           font-weight: 600;
-          font-family: 'Fugaz One', cursive;
+          font-family: $cursiveFugazOne, $cursiveFontFamily;
           color: #483d8b;
         }
       }
@@ -264,13 +267,13 @@
         font-size: 45px;
         font-weight: 700;
         color: #483d8b;
-        font-family: 'Fugaz One', cursive;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
       }
 
       .tab-business-text {
         font-size: 40px;
         font-weight: 500;
-        font-family: 'Fugaz One', cursive;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
       }
     }
 
@@ -284,13 +287,13 @@
         font-size: 45px;
         font-weight: 700;
         color: #483d8b;
-        font-family: 'Fugaz One', cursive;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
       }
 
       .business-text {
         font-size: 40px;
         font-weight: 500;
-        font-family: 'Fugaz One', cursive;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
       }
     }
 
@@ -310,13 +313,13 @@
         font-size: 45px;
         font-weight: 700;
         color: #483d8b;
-        font-family: 'Fugaz One', cursive;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
       }
 
       .online-class-text {
         font-size: 40px;
         font-weight: 500;
-        font-family: 'Fugaz One', cursive;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
       }
     }
 
@@ -331,6 +334,9 @@
   .tabbar-button {
     display: flex;
     justify-content: center;
+
+    border-bottom: 2px solid #b5b4b4;
+    margin: 0px 50px;
 
     .e-commerce-network {
       color: red;
@@ -382,40 +388,271 @@
   min-height: 30vh;
   background-color: #edf3f6;
 
+
+  .why-us-column {
+    padding: 8px 20px;
+
+    .why-us-text {
+      font-size: 20px;
+      color: #4f4fa5;
+      padding: 16px 0px;
+    }
+  }
+
+  .inline-text {
+    line-height: 1.2;
+
+    .reasons-text {
+      font-size: 40px;
+      font-weight: normal;
+      color: #483d8b;
+      font-family: $cursiveFugazOne, $cursiveFontFamily;
+    }
+
+    .as-your-network-text {
+      .as-your-text {
+        font-size: 35px;
+        font-weight: normal;
+        color: #444444;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+
+      .network-text {
+        font-size: 40px;
+        font-weight: 700;
+        color: #483d8b;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+
+      .partner-text {
+        font-size: 35px !important;
+        font-weight: normal;
+        color: #444444;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+    }
+  }
+
 }
 
 .middle-section-third {
   min-height: 50vh;
   background-color: #edf3f6;
 
-  .features-and-customize-card {
-    padding: 16px;
-    min-height: 300px;
-    background-color: #edf3f6;
-    border: none;
+  .features-and-customize-card-column {
+    padding: 30px 10px;
+
+    .features-and-customize-card {
+      padding: 16px;
+      min-height: 300px;
+      background-color: #edf3f6;
+      border: none;
+
+      .feature-column {
+        min-height: 200px;
+
+        .feature-title {
+          padding: 16px 10px;
+          display: flex;
+          justify-content: flex-start;
+
+          .title-icon {
+            color: #483d8b;
+            font-size: 30px;
+          }
+
+          .title-text {
+            font-size: 24px;
+            color: grey;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0px 8px;
+            font-weight: normal;
+            color: #483d8b;
+            font-family: $cursiveFugazOne, $cursiveFontFamily;
+          }
+        }
+
+        .feature-description {
+          font-size: 15px;
+          color: grey;
+        }
+      }
+    }
   }
+
 
 }
 
 .middle-section-fourth {
   min-height: 100vh;
+  padding-top: 100px;
   background-color: #edf3f6;
 
-  .pricing-plan-card {
-    padding: 12px;
-    min-height: 500px;
-    background-color: #edf3f6;
-    border: none;
+  .pricing-plan-column {
+    .pricing-plan-text {
+      font-size: 20px;
+      color: #4f4fa5;
+      padding: 16px 0px;
+    }
   }
+
+  .providing-business-column {
+    .providing-business-text {
+      line-height: 1.2;
+
+      .providing-text {
+        font-size: 40px;
+        font-weight: 700;
+        color: #483d8b;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+
+      .business-text {
+        font-size: 35px !important;
+        font-weight: normal;
+        color: #444444;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+
+    }
+  }
+
+  .pricing-column {
+    .pricing-inner-column {
+      padding-top: 80px;
+    }
+
+  }
+
+  .pricing-middle-card {
+    padding: 0px 60px;
+
+    .pricing-card-column {
+      display: flex;
+      justify-content: center;
+
+      .pricing-plan-card {
+        padding: 80px 20px;
+        min-height: 600px;
+        max-width: 400px;
+        background-color: #edf3f6;
+        border: none;
+      }
+    }
+
+  }
+
 }
 
 .middle-section-fifth {
   min-height: 40vh;
+  padding-top: 100px;
   background-color: #edf3f6;
+
+  .contact-details-column {
+    display: flex;
+    justify-content: center;
+
+    .our-contact-text {
+      font-size: 20px;
+      color: #4f4fa5;
+      padding: 16px 0px;
+    }
+
+    .get-in-touch-text {
+      .get-in-text {
+        font-size: 30px;
+        font-weight: 700;
+        color: #483d8b;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+
+      .touch-text {
+        font-size: 30px;
+        font-weight: normal;
+        color: #444444;
+        font-family: $cursiveFugazOne, $cursiveFontFamily;
+      }
+    }
+  }
+
+  .contact-location-mail-phone-column {
+    min-height: 100px;
+
+
+    .contact-location {
+      display: flex;
+      justify-content: flex-start;
+
+      .location-icon {
+        padding: 16px 10px;
+
+        .icon {
+          padding: 10px 16px;
+          color: white;
+          border-radius: 500%;
+          background-color: black;
+          font-size: 24px;
+        }
+      }
+
+      .location-text {
+        line-height: 1.4;
+        padding: 6px 0px;
+      }
+    }
+
+    .contact-mail {
+      display: flex;
+      justify-content: flex-start;
+
+      .mail-icon {
+        padding: 16px 10px;
+
+        .icon {
+          padding: 10px 14px;
+          color: white;
+          border-radius: 500%;
+          background-color: #ff0052;
+          font-size: 24px;
+        }
+      }
+
+      .mail-text {
+        line-height: 0.8;
+        padding: 6px 0px;
+      }
+    }
+
+    .contact-phone {
+      display: flex;
+      justify-content: flex-start;
+
+      .phone-icon {
+        padding: 16px 10px;
+
+        .icon {
+          padding: 10px 14px;
+          color: white;
+          border-radius: 500%;
+          background-color: #3087ff;
+          font-size: 24px;
+        }
+      }
+
+      .phone-text {
+        line-height: 0.8;
+        padding: 6px 0px;
+      }
+    }
+  }
 }
 
 .footer-section {
   min-height: 80vh;
+  padding-top: 60px;
+  padding-bottom: 200px;
   background-color: #edf3f6;
 
 }
